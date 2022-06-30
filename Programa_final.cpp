@@ -19,9 +19,22 @@ Array: [4,8,6,1,3,7] / Valor alvo: 7
 #define MAX 9
 #include <stdio.h>
 int main()
-{	        
+{
+	
+	//int v[9]; // Declara o vetor com 9 posicoes para ser digitado pelo usuario
+	        
 	int v[] = {1,2,3,4,5,6,7,8,9}; // Declara o vetor com os valores fixos
 	int i, alvo, prox, soma, ocorrencia = 0;
+	
+/*	
+	// Preenchendo o vetor com dados digitados pelo usuario
+	printf("Preencha: \n");
+	for(i = 0; i < MAX; i++)
+	{
+		printf("v[%d] = ",i);
+		scanf("%d", &v[i]);
+	}
+*/
 	
 	// Lendo o valor alvo
 	printf("Valor alvo: ");
@@ -31,7 +44,7 @@ int main()
 	{
 		for(prox = 0; prox < MAX; prox++)
 		{
-			// não testa o mesmo indice
+			// nao testa o mesmo indice
 			if (i != prox)
 			{
 				soma = v[i] + v[prox];
@@ -47,7 +60,7 @@ int main()
 	
 	// Esta rotina exibe "Houve X ocorrencia(s)" no plural ou singular
 
-	// sempre exibe a primeira parte da mensagem
+	// sempre exibe a primeira parte da mentagem
 	printf("\nHouve %d ", ocorrencia); 
 	// verifica se deve exibir no plurao ou singular
 	if (ocorrencia > 1) 
